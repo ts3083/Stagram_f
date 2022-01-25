@@ -11,7 +11,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/logo_title" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/email"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/password"/>
 
 
+    </LinearLayout>
 
 </RelativeLayout>
