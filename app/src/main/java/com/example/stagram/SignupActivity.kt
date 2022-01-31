@@ -11,12 +11,14 @@ import com.google.firebase.auth.FirebaseUser
 
 class SignupActivity : AppCompatActivity() {
     var auth : FirebaseAuth? = null
-    val signup_email_edittext : EditText = findViewById(R.id.signup_email_edittext)
-    val signup_password_edittext : EditText = findViewById(R.id.signup_password_edittext)
+    var email_signup_text : EditText? = null
+    var password_signup_text : EditText? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
         auth = FirebaseAuth.getInstance()
+        email_signup_text = findViewById(R.id.signup_email_edittext)
+        password_signup_text = findViewById(R.id.signup_password_edittext)
         val backto_loginActivity_button : Button = findViewById(R.id.backtologinActivity)
         val complete_signup_button : Button = findViewById(R.id.complete_signup_button)
 
@@ -29,8 +31,8 @@ class SignupActivity : AppCompatActivity() {
     }
 
     fun signup() {
-        if (signup_email_edittext.length() > 1 && signup_password_edittext.length() > 1) {
-            auth?.createUserWithEmailAndPassword(signup_email_edittext.text.toString(), signup_password_edittext.text.toString())
+        if (email_signup_text?.length()!! > 1 && password_signup_text?.length()!! > 1) {
+            auth?.createUserWithEmailAndPassword(email_signup_text?.text.toString(), password_signup_text?.text.toString())
                 ?.addOnCompleteListener { // 통신 완료가 된 후에 할 일을 적어준다
                         task ->
                     if (task.isSuccessful) { 

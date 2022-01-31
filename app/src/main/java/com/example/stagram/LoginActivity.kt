@@ -11,26 +11,28 @@ import com.google.firebase.auth.FirebaseUser
 
 class LoginActivity : AppCompatActivity() {
     var auth : FirebaseAuth? = null
-    val email_edittext : EditText = findViewById(R.id.email_edittext)
-    val password_edittext : EditText = findViewById(R.id.password_edittext)
+    var email_login_text : EditText? = null
+    var password_login_text : EditText? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         auth = FirebaseAuth.getInstance()
+        email_login_text = findViewById(R.id.email_edittext)
+        password_login_text = findViewById(R.id.password_edittext)
         val loginbtn : Button = findViewById(R.id.email_login_button)
-        val signinbtn : Button = findViewById(R.id.email_signup_button)
+        val signupbtn : Button = findViewById(R.id.email_signup_button)
 
         loginbtn.setOnClickListener { // 로그인 버튼을 클릭하면 login 함수 실행
             login()
         }
-        signinbtn.setOnClickListener { // 회원가입 버튼을 클릭하면 회원가입 창으로 이동
+        signupbtn.setOnClickListener { // 회원가입 버튼을 클릭하면 회원가입 창으로 이동
             startActivity(Intent(this, SignupActivity::class.java))
         }
     }
 
     fun login(){
-        if (email_edittext.length() > 1 && password_edittext.length() > 1) {
-            auth?.signInWithEmailAndPassword(email_edittext.text.toString(), password_edittext.text.toString())
+        if (email_login_text?.length()!! > 1 && password_login_text?.length()!! > 1) {
+            auth?.signInWithEmailAndPassword(email_login_text?.text.toString(), password_login_text?.text.toString())
                 ?.addOnCompleteListener { // 통신 완료가 된 후에 할 일을 적어준다
                     task ->
                     if (task.isSuccessful) { // 로그인 정보가 존재한다면 로그인 처리를 해준다
