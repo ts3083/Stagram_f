@@ -8,7 +8,8 @@
     <!-- Sign In -->
     <string name="email">Email</string>
     <string name="password">Password</string>
-    <string name="signin_email">회원가입 및 이메일 로그인</string>
+    <string name="signin_email">이메일 로그인</string>
+    <string name="signup_email">이메일 회원가입</string>
     <string name="signin_google">Google으로 로그인</string>
     <string name="signin_facebook">Facebook으로 로그인</string>
     <string name="signin_twitter">Twitter으로 로그인</string>
@@ -18,6 +19,11 @@
     <string name="signout_success">로그아웃 성공</string>
     <string name="signout_fail">로그아웃 실패</string>
     <string name="signout_fail_null">이메일과 비밀번호를 입력해주세요</string>
+
+    <!-- Sign up -->
+    <string name="signupActivity_maintitle">회원가입 화면입니다</string>
+    <string name="backtologinActivity">로그인 화면으로</string>
+    <string name="okay_singup">회원가입</string>
 
     <!-- Bottom Navigation View -->
     <string name="home">home</string>

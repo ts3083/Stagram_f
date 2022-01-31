@@ -12,7 +12,8 @@
         android:layout_height="wrap_content"
         android:layout_above="@id/signin_layout"
         android:layout_alignParentTop="true"
-        android:src="@drawable/logo_title" />
+        android:src="@drawable/logo_title"
+        android:layout_margin="45dp"/>
     <LinearLayout
         android:id="@+id/signin_layout"
         android:layout_width="match_parent"
@@ -27,21 +28,38 @@
             android:hint="@string/email"
             android:layout_marginHorizontal="15dp"/>
         <EditText
+            android:inputType="textPassword"
             android:id="@+id/password_edittext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/password"
             android:layout_marginHorizontal="15dp"/>
-        <Button
-            android:id="@+id/email_login_button"
-            android:text="@string/signin_email"
-            android:theme="@style/ButtonStyle"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="10dp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+            <Button
+                android:id="@+id/email_login_button"
+                android:text="@string/signin_email"
+                android:theme="@style/ButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"/>
+            <Button
+                android:id="@+id/email_signup_button"
+                android:text="@string/signup_email"
+                android:theme="@style/ButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"/>
+        </LinearLayout>
         <Button
             android:text="@string/signin_facebook"
             android:textColor="@color/colorWhite"
@@ -62,7 +80,6 @@
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="35dp"/>
-
 
     </LinearLayout>
 
