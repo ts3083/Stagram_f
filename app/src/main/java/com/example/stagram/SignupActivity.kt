@@ -47,8 +47,7 @@ class SignupActivity : AppCompatActivity() {
         }
         else {
             Toast.makeText(this,
-                "올바른 이메일 혹은 비밀번호가 아닙니다",
-                Toast.LENGTH_LONG).show()
+                "올바른 이메일 혹은 비밀번호가 아닙니다", Toast.LENGTH_LONG).show()
         }
     }
 
