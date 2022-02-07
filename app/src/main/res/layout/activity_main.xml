@@ -18,8 +18,8 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:src="@drawable/logo_title"
-                android:layout_marginStart="45dp"/>
+                android:layout_marginStart="45dp"
+                android:src="@drawable/logo_title" />
         </RelativeLayout>
     </androidx.appcompat.widget.Toolbar>
     
@@ -37,7 +37,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/nav_division"
-        android:layout_below="@id/Toolbar_division"></FrameLayout>
+        android:layout_below="@id/Toolbar_division">
+    </FrameLayout>
 
     <LinearLayout
         android:id="@+id/nav_division"
