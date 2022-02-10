@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // xml에 씌여져있는 view의 정의를 실제 view 객체로 만드는 역할
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 

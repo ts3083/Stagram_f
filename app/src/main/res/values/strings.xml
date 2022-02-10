@@ -58,6 +58,7 @@
 
     <!-- Toolbar -->
     <string name="back">Back</string>
+    <string name="photo_upload">Photo Upload</string>
 
     <!-- etc -->
     <item name="visible" type="id" />
