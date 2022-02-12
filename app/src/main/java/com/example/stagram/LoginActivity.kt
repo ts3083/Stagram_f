@@ -183,7 +183,7 @@ class LoginActivity : AppCompatActivity() {
             // 통신 완료가 된 후에 할 일을 적어준다
                     task ->
                 if (task.isSuccessful) { // 로그인 정보가 존재한다면 로그인 처리를 해준다
-                    goMainActivity(auth?.currentUser) // 메인 액티비티로의 이동
+                    goMainActivity(task.result?.user) // 메인 액티비티로의 이동
                 } else { // 로그인 정보가 존재하지 않는다면 오류 메세지 toast
                     Toast.makeText(this, "사용자 정보가 존재하지 않습니다",Toast.LENGTH_LONG).show()
                 }
