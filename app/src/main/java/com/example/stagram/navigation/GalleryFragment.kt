@@ -37,9 +37,9 @@ class GalleryFragment(uri: Uri) : Fragment() {
 
         // 파일 로드, 다운로드, 삭제, 메타데이터 가져오기 또는 업데이트를 하기 위해 레퍼런스 생성
         // 참조는 클라우드 파일을 가리키는 포인터라고 할 수 있음
-        var imageRef = storage!!.reference.child("image/").child(fileName)
+        var imageRef = storage!!.reference.child("images/").child(fileName)
 
-        imageRef.putFile(uri!!).addOnSuccessListener {
+        imageRef.putFile(uri).addOnSuccessListener {
             Toast.makeText(activity, getString(R.string.upload_success), Toast.LENGTH_LONG).show()
         }.addOnFailureListener {
             println(it)
