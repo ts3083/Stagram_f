@@ -66,7 +66,7 @@ class LoginActivity : AppCompatActivity() {
 
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             // 사용자의 기본적인 정보(userID, basic profile)를 얻기
-            .requestIdToken(getString(R.string.default_web_client_id))
+            .requestIdToken("651308525327-88tgcq1hibjaf70vtkd6a2r3rhigrnrc.apps.googleusercontent.com")
             // 필수사항으로 사용자의 식별값을 사용하겠다고 app이 구글에 요청하는 것
             .requestEmail()
             // 사용자의 이메일을 사용하겠다고 app이 구글에 요청하는 것
