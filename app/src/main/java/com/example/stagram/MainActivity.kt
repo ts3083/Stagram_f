@@ -32,6 +32,8 @@ class MainActivity : AppCompatActivity() {
        ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE)
         , 1)
 
+        // 메인 화면이 뜨면 detailviewfragment가 뜨도록 설정
+        binding.bottomNavigation.selectedItemId = R.id.action_home
 }
     fun initNavigationBar() {
         binding.bottomNavigation.run {

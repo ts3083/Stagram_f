@@ -105,16 +105,16 @@ class LoginActivity : AppCompatActivity() {
         // LoginResult : 페이스북 로그인이 최종 성공했을 때 넘어오는 부분
         LoginManager.getInstance()
             .registerCallback(callbackManager, object : FacebookCallback<LoginResult>{
-                override fun onSuccess(result: LoginResult?) {
+                override fun onSuccess(result: LoginResult) {
                     // Second step
                     // 로그인이 성공하면 페이스북 데이터를 파이어베이스에 넘기는 함수
-                    handleFacebookAccessToken(result?.accessToken)
+                    handleFacebookAccessToken(result.accessToken)
                 }
 
                 override fun onCancel() {
                 }
 
-                override fun onError(error: FacebookException?) {
+                override fun onError(error: FacebookException) {
                 }
 
             })
